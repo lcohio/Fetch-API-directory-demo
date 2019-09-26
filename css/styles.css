@@ -1,8 +1,8 @@
 /* ===================================== 
-   Public API Request
+   Public API Request Styles
 ======================================== */
 
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -14,9 +14,9 @@ html, body {
 }
 
 body {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
-    background: rgba(235, 235, 235, 0.9);
+    background: rgba(144, 191, 222, .9);
 }
 
 header {
@@ -110,7 +110,7 @@ header h1 {
 }
 
 .card-text {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: rgba(50, 50, 50, 0.7);
     margin: 7px auto;
     transition: .4s ease-out;

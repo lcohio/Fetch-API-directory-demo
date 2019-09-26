@@ -30,6 +30,7 @@ $('#search-input').on('input', () => {
 const fetchData = fetch('https://randomuser.me/api/?results=12&nat=us')
 .then(response => response.json());
 
+// Render data cards to DOM
 fetchData.then(function(data) {
     employeeData = data.results;
     renderedData.push(...employeeData);
@@ -100,14 +101,14 @@ const generateModalUi = (data, i) => {
 };
 
 // Remove current modal UI from #gallery 
-// NOTE: This function is called from the onClick prop
-// of the modal close button
+// NOTE: This function is called from the onClick prop of the modal close button
 const removeModalUi = () => {
     let galleryDiv = document.getElementById('gallery');
     let modalToRemove = document.querySelector('.modal-container');
     galleryDiv.removeChild(modalToRemove);
 };
 
+// Insert modal data at next index respective to the current index being passed at generateModalUi()
 const cycleModalContent = (data, i) => {
     indexOfModal = i;
     document.querySelector('.modal-container').remove();
