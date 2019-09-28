@@ -74,7 +74,7 @@ const generateModalUi = (data, i) => {
                     <p class="modal-text cap" id="city">${employeeData[i].location.city}</p>
                     <hr>
                     <p class="modal-text" id="phone">${employeeData[i].phone}</p>
-                    <p class="modal-text" id="address">${employeeData[i].location.street} ${employeeData[i].location.city}, ${employeeData[i].location.state}</p>
+                    <p class="modal-text" id="address">${employeeData[i].location.city}, ${employeeData[i].location.state}</p>
                     <p class="modal-text" id="dob">${employeeData[i].dob.date}</p>
                 </div>
             </div>
@@ -121,7 +121,7 @@ const cycleModalContent = (data, i) => {
                     <p class="modal-text cap" id="city">${data[i].location.city}</p>
                     <hr>
                     <p class="modal-text" id="phone">${data[i].phone}</p>
-                    <p class="modal-text" id="address">${data[i].location.street} ${data[i].location.city}, ${data[i].location.state}</p>
+                    <p class="modal-text" id="address">${data[i].location.city}, ${data[i].location.state}</p>
                     <p class="modal-text" id="dob">${data[i].dob.date}</p>
                 </div>
             </div>
