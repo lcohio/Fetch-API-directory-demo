@@ -50,8 +50,7 @@ fetchData.then(function(data) {
 })
 // Then loop through each employee DOM node and attach event listener that calls generateModalUi() below
 .then(() => {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((currentCard, i) => {
+    document.querySelectorAll('.card').forEach((currentCard, i) => {
         currentCard.addEventListener('click', (e) => {
             e.preventDefault();
             generateModalUi(renderedData, i);
@@ -103,9 +102,7 @@ const generateModalUi = (data, i) => {
 // Remove current modal UI from #gallery 
 // NOTE: This function is called from the onClick prop of the modal close button
 const removeModalUi = () => {
-    let galleryDiv = document.getElementById('gallery');
-    let modalToRemove = document.querySelector('.modal-container');
-    galleryDiv.removeChild(modalToRemove);
+    document.getElementById('gallery').removeChild(document.querySelector('.modal-container'));
 };
 
 // Insert modal data at next index respective to the current index being passed at generateModalUi()
