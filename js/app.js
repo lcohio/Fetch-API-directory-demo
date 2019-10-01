@@ -64,6 +64,7 @@ fetchData.then(function(data) {
 const generateModalUi = (data, i) => {
     indexOfModal = i;
     let galleryDiv = document.getElementById('gallery');
+    console.log(employeeData);
     galleryDiv.insertAdjacentHTML('beforeend',
     `
         <div class="modal-container">
@@ -73,11 +74,11 @@ const generateModalUi = (data, i) => {
                     <img class="modal-img" src="${data[i].picture.large}" alt="profile picture">
                     <h3 id="name" class="modal-name cap">${data[i].name.first} ${data[i].name.last}</h3>
                     <p class="modal-email">${data[i].email}</p>
-                    <p class="modal-text cap" id="city">${employeeData[i].location.city}</p>
+                    <p class="modal-text cap" id="city">${data[i].location.city}</p>
                     <hr>
-                    <p class="modal-text" id="phone">${employeeData[i].phone}</p>
-                    <p class="modal-text" id="address">${employeeData[i].location.city}, ${employeeData[i].location.state}</p>
-                    <p class="modal-text" id="dob">${employeeData[i].dob.date}</p>
+                    <p class="modal-text" id="phone">${data[i].phone}</p>
+                    <p class="modal-text" id="address">${data[i].location.city}, ${data[i].location.state} ${data[i].location.postcode}</p>
+                    <p class="modal-text" id="dob">${data[i].dob.date}</p>
                 </div>
             </div>
             <div class="modal-btn-container">
@@ -123,7 +124,7 @@ const cycleModalContent = (data, i) => {
                     <p class="modal-text cap" id="city">${data[i].location.city}</p>
                     <hr>
                     <p class="modal-text" id="phone">${data[i].phone}</p>
-                    <p class="modal-text" id="address">${data[i].location.city}, ${data[i].location.state}</p>
+                    <p class="modal-text" id="address">${data[i].location.city}, ${data[i].location.state} ${data[i].location.postcode}</p>
                     <p class="modal-text" id="dob">${data[i].dob.date}</p>
                 </div>
             </div>
