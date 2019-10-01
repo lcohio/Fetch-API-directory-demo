@@ -56,6 +56,8 @@ fetchData.then(function(data) {
             generateModalUi(renderedData, i);
         });
     });
+}).catch(() => {
+    console.log('Error fetching API data');
 });
 
 // Generate Modal UI and append to end of #gallery div
